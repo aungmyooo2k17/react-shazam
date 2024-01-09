@@ -19,16 +19,16 @@ fetch(
 export const shazamCoreApi = createApi({
   reducerPath: 'shazamCoreApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://shazam-api6.p.rapidapi.com/shazam',
-    prepareHeaders: (headers) => {
-      headers.set(
-        'X-RapidAPI-Key',
-        '127263eadbmsh730ef14e7b9122ap1d606fjsn41a9ea47a1ef',
-      );
-      headers.set('X-RapidAPI-Host', 'shazam-api6.p.rapidapi.com');
+    baseUrl: 'http://localhost:3000/shazam',
+    // prepareHeaders: (headers) => {
+    //   headers.set(
+    //     'X-RapidAPI-Key',
+    //     '127263eadbmsh730ef14e7b9122ap1d606fjsn41a9ea47a1ef',
+    //   );
+    //   headers.set('X-RapidAPI-Host', 'localhost');
 
-      return headers;
-    },
+    //   return headers;
+    // },
   }),
   endpoints: (builder) => ({
     getTopCharts: builder.query({
